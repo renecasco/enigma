@@ -7,19 +7,19 @@ require './lib/shift'
 class ShiftTest < Minitest::Test
 
   def test_it_exists
-    shifts = Shift.new
-    assert_instance_of Shifts, shifts
+    shift = Shift.new
+    assert_instance_of Shift, shift
   end
 
   def test_if_character_set_exists
-    shifts = Shift.new
+    shift = Shift.new
     expected = ("a".."z").to_a << " "
     assert_equal expected, shift.characters
   end
 
   def test_if_key_shift_returns_expected_values_in_array
-    shifts = Shift.new
-    actual = shift.key("12345")
+    shift = Shift.new
+    actual = shift.key_shift("12345")
     expected = [12, 23, 34, 45]
     assert_equal = expected, equal
   end

@@ -5,4 +5,9 @@ class Shift
     @characters = ("a".."z").to_a << " "
   end
 
+  def key
+
+  end
+
+
 end
