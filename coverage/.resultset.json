@@ -1,12 +1,17 @@
 {
   "Unit Tests": {
     "coverage": {
-      "/Users/renecasco/turing/1module/projects/enigma/lib/rotations.rb": [
+      "/Users/renecasco/turing/1module/projects/enigma/lib/shifts.rb": [
         1,
+        1,
+        null,
+        1,
+        2,
+        null,
         null,
         null
       ]
     },
-    "timestamp": 1541367124
+    "timestamp": 1541369603
   }
 }
