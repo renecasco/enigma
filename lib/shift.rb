@@ -1,4 +1,4 @@
-class Shifts
+class Shift
   attr_reader :characters
 
   def initialize
