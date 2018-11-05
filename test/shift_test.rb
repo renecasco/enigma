@@ -33,7 +33,7 @@ class ShiftTest < Minitest::Test
 
   def test_it_returns_final_shifts_in_array
     shift = Shift.new
-    actual = shift.final("12345", Date.parse("2018-11-04"))
+    actual = shift.final_shift("12345", Date.parse("2018-11-04"))
     expected = [21, 32, 36, 49]
     assert_equal expected, actual
   end
