@@ -2,9 +2,11 @@
   "Unit Tests": {
     "coverage": {
       "/Users/renecasco/turing/1module/projects/enigma/lib/character_set.rb": [
-
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1541388630
+    "timestamp": 1541388957
   }
 }
