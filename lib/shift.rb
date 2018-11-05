@@ -19,8 +19,10 @@ class Shift
     offsets.map {|offset| offset.to_i}
   end
 
-  def final
-
+  def final(number, date)
+    keys = the_keys(number)
+    offsets = the_offsets(date)
+    keys.zip(offsets).map {|numbers| numbers.sum}
   end
 
 
