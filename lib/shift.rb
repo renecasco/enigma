@@ -1,9 +1,4 @@
 class Shift
-  attr_reader :characters
-
-  def initialize
-    @characters = ("a".."z").to_a << " "
-  end
 
   def the_keys(number)
     number.chars.map.with_index do |character, index|
@@ -22,6 +17,5 @@ class Shift
     offsets = the_offsets(date)
     keys.zip(offsets).map {|numbers| numbers.sum}
   end
-
 
 end
