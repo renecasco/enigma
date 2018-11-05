@@ -5,8 +5,8 @@ class Shift
     @characters = ("a".."z").to_a << " "
   end
 
-  def key_shift(key)
-    characters = key.chars
+  def the_keys(keys)
+    characters = keys.chars
     characters.map.with_index do |character, index|
       if index < 4
         character += characters[index + 1]
@@ -14,6 +14,8 @@ class Shift
       end
     end.compact
   end
+
+
 
 
 end
