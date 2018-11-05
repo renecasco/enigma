@@ -5,10 +5,10 @@ class Shift
     @characters = ("a".."z").to_a << " "
   end
 
-  def the_keys(keys)
-    keys.chars.map.with_index do |character, index|
+  def the_keys(number)
+    number.chars.map.with_index do |character, index|
       if index < 4
-        (character += keys[index + 1]).to_i
+        (character += number[index + 1]).to_i
       end
     end.compact
   end
@@ -19,6 +19,9 @@ class Shift
     offsets.map {|offset| offset.to_i}
   end
 
+  def final
+
+  end
 
 
 end
