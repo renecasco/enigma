@@ -3,10 +3,16 @@
     "coverage": {
       "/Users/renecasco/turing/1module/projects/enigma/lib/character_set.rb": [
         1,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
         null,
         null
       ]
     },
-    "timestamp": 1541388957
+    "timestamp": 1541389127
   }
 }
