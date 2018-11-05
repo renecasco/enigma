@@ -21,7 +21,7 @@ class ShiftTest < Minitest::Test
     shift = Shift.new
     actual = shift.key_shift("12345")
     expected = [12, 23, 34, 45]
-    assert_equal = expected, equal
+    assert_equal expected, actual
   end
 
 end
