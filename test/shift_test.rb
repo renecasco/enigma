@@ -11,12 +11,6 @@ class ShiftTest < Minitest::Test
     assert_instance_of Shift, shift
   end
 
-  def test_if_character_set_exists
-    shift = Shift.new
-    expected = ("a".."z").to_a << " "
-    assert_equal expected, shift.characters
-  end
-
   def test_it_returns_keys_in_array
     shift = Shift.new
     actual = shift.the_keys("12345")
