@@ -17,10 +17,19 @@ class EnigmaTest < Minitest::Test
     assert_instance_of Translate, enigma.translate
   end
 
+  def test_it_generates_5_digit_random_key
+    enigma = Enigma.new
+    assert_equal 5, enigma.random_key.length
+  end
+
   def test_it_can_encrypt
     enigma = Enigma.new
     actual = enigma.encrypt("Hello World!", "02715", Date.parse("1995-08-04"))
-    expected = "keder ohulw!"
+    expected = {
+      :encryption => "keder ohulw!",
+      :key => "02715",
+      :date => "04081995"
+    }
     assert_equal expected, actual
   end
 
