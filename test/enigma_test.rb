@@ -17,4 +17,12 @@ class EnigmaTest < Minitest::Test
     assert_instance_of Translate, enigma.translate
   end
 
+  def test_it_can_encrypt
+    enigma = Enigma.new
+    actual = enigma.encrypt("Hello World!", "02715", Date.parse("1995-08-04"))
+    expected = "keder ohulw!"
+    assert_equal expected, actual
+  end
+
+
 end
