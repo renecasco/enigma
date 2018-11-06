@@ -19,7 +19,7 @@ class TranslateTest < Minitest::Test
 
   def test_it_can_translate_message
     translate = Translate.new
-    actual = translate.do_rotations("Hello World!", "02715", Date.parse("1995-08-04"))
+    actual = translate.do_rotations("Hello World!", [3, 27, 73, 20])
     expected = "keder ohulw!"
     assert_equal expected, actual
   end

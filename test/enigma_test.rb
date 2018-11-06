@@ -17,6 +17,11 @@ class EnigmaTest < Minitest::Test
     assert_instance_of Translate, enigma.translate
   end
 
+  def test_it_has_shift
+    enigma = Enigma.new
+    assert_instance_of Shift, enigma.shift
+  end
+
   def test_it_generates_5_digit_random_key
     enigma = Enigma.new
     assert_equal 5, enigma.random_key.length
@@ -37,7 +42,7 @@ class EnigmaTest < Minitest::Test
     enigma = Enigma.new
     actual = enigma.decrypt("keder ohulw!", "02715", Date.parse("1995-08-04"))
     expected = {
-      :encryption => "hello world!",
+      :decryption => "hello world!",
       :key => "02715",
       :date => "040895"
     }
