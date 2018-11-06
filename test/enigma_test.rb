@@ -28,7 +28,7 @@ class EnigmaTest < Minitest::Test
     expected = {
       :encryption => "keder ohulw!",
       :key => "02715",
-      :date => "04081995"
+      :date => "040895"
     }
     assert_equal expected, actual
   end
