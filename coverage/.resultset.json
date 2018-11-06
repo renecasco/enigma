@@ -9,8 +9,8 @@
         1,
         null,
         1,
-        0,
-        0,
+        2,
+        2,
         null,
         null,
         1,
@@ -52,12 +52,18 @@
         null
       ],
       "/Users/renecasco/turing/1module/projects/enigma/lib/enigma.rb": [
+        1,
         null,
         1,
+        1,
+        null,
+        1,
+        2,
+        null,
         null,
         null
       ]
     },
-    "timestamp": 1541537370
+    "timestamp": 1541537754
   }
 }
