@@ -12,7 +12,11 @@ class Enigma
   end
 
   def encrypt(message, key = random_key, date = Date.today)
-
+    {
+    :encryption => translate.do_rotations(message, key, date),
+    :key => key,
+    :date => date.strftime('%d') + date.strftime('%m') + date.strftime('%y')
+    }
   end
 
 end
