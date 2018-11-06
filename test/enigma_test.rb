@@ -12,4 +12,9 @@ class EnigmaTest < Minitest::Test
     assert_instance_of Enigma, enigma
   end
 
+  def test_it_has_translate
+    enigma = Enigma.new
+    assert_instance_of Translate, enigma.translate
+  end
+
 end
