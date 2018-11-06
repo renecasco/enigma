@@ -8,15 +8,16 @@ class Enigma
   end
 
   def random_key
-    Array.new(5){|i|rand(0..9)}.join
+    Array.new(5){|index|rand(0..9)}.join
   end
 
   def encrypt(message, key = random_key, date = Date.today)
-    {
-    :encryption => translate.do_rotations(message, key, date),
+    {:encryption => translate.do_rotations(message, key, date),
     :key => key,
-    :date => date.strftime('%d') + date.strftime('%m') + date.strftime('%y')
-    }
+    :date => date.strftime('%d') + date.strftime('%m') + date.strftime('%y')}
   end
+
+  
+
 
 end
