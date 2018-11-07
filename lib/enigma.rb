@@ -2,16 +2,12 @@ require './lib/translate'
 require './lib/shift'
 
 class Enigma
-  attr_reader :translate, 
+  attr_reader :translate,
               :shift
 
   def initialize
     @translate = Translate.new
     @shift = Shift.new
-  end
-
-  def random_key
-    Array.new(5){|index|rand(0..9)}.join
   end
 
   def encrypt(message, key = random_key, date = Date.today)
