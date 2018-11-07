@@ -18,7 +18,8 @@ class HelperTest < Minitest::Test
   def test_it_coverts_date_format
     helper = Helper.new
     date = Date.parse("1995-08-04")
-    assert_equal "040895", helper.date_conversion(date)
+    assert_equal "040895", helper.today(date)
   end
+
 
 end
