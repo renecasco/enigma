@@ -4,6 +4,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/translate'
 require './lib/enigma'
+require './lib/helper'
 
 class EnigmaTest < Minitest::Test
 
@@ -36,6 +37,17 @@ class EnigmaTest < Minitest::Test
       :date => "040895"
     }
     assert_equal expected, actual
+  end
+
+  def test_it_can_encrypt_without_date
+    enigma = Enigma.new
+    helper = Helper.new
+    actual = enigma.encrypt("Hello World!", "02715")
+    expected_date = helper.today(Date.today)
+    actual_date = actual[:date]
+    assert_equal expected_date, actual_date
+    assert_instance_of String, actual[:encryption]
+    assert_equal  12, actual[:encryption].length
   end
 
   def test_it_can_decrypt
