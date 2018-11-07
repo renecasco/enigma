@@ -2,7 +2,7 @@ require './lib/translate'
 require './lib/shift'
 
 class Enigma
-  attr_reader :translate, # these attr_reader methods were created for testing 
+  attr_reader :translate, 
               :shift
 
   def initialize
