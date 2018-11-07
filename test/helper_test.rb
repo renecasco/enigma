@@ -10,8 +10,13 @@ class HelperTest < Minitest::Test
   end
 
   def test_it_generates_5_digit_random_key
-    enigma = Helper.new
+    helper = Helper.new
     assert_equal 5, enigma.random_key.length
+  end
+
+  def test_it_coverts_date_format
+    helper = Helper.new
+    assert_equal "040895", date_conversion(Date.parse("1995-08-04"))
   end
 
 
