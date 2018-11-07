@@ -4,6 +4,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/translate'
 require './lib/enigma'
+require './lib/helper'
 
 class EnigmaTest < Minitest::Test
 
@@ -38,6 +39,43 @@ class EnigmaTest < Minitest::Test
     assert_equal expected, actual
   end
 
+  def test_it_can_encrypt_without_date
+    enigma = Enigma.new
+    helper = Helper.new
+    actual = enigma.encrypt("Hello World!", "02715")
+    expected_date = helper.today(Date.today)
+    actual_date = actual[:date]
+    assert_equal expected_date, actual_date
+    assert_instance_of String, actual[:encryption]
+    assert_equal  12, actual[:encryption].length
+  end
+
+  def test_it_can_encrypt_without_key
+    enigma = Enigma.new
+    helper = Helper.new
+    actual = enigma.encrypt("Hello World!", "040895")
+    expected_date = "040895"
+    actual_date = actual[:date]
+    assert_equal expected_date, actual_date
+    assert_instance_of String, actual[:encryption]
+    assert_equal  12, actual[:encryption].length
+    assert_instance_of String, actual[:key]
+    assert_equal 5, actual[:key].length
+  end
+
+  def test_it_can_encrypt_without_date_and_key
+    enigma = Enigma.new
+    helper = Helper.new
+    actual = enigma.encrypt("Hello World!")
+    expected_date = helper.today(Date.today)
+    actual_date = actual[:date]
+    assert_equal expected_date, actual_date
+    assert_instance_of String, actual[:encryption]
+    assert_equal  12, actual[:encryption].length
+    assert_instance_of String, actual[:key]
+    assert_equal  5, actual[:key].length
+  end
+
   def test_it_can_decrypt
     enigma = Enigma.new
     actual = enigma.decrypt("keder ohulw!", "02715", "040895")
@@ -49,5 +87,14 @@ class EnigmaTest < Minitest::Test
     assert_equal expected, actual
   end
 
+  def test_it_can_decrypt_without_date
+    enigma = Enigma.new
+    helper = Helper.new
+    actual = enigma.decrypt("keder ohulw!", "02715")
+    expected_date = helper.today(Date.today)
+    assert_equal expected_date, actual[:date]
+    assert_instance_of String, actual[:decryption]
+    assert_equal  12, actual[:decryption].length
+  end
 
 end
