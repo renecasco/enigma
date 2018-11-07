@@ -9,5 +9,10 @@ class HelperTest < Minitest::Test
     assert_instance_of Helper, helper
   end
 
+  def test_it_generates_5_digit_random_key
+    enigma = Enigma.new
+    assert_equal 5, enigma.random_key.length
+  end
+
 
 end
