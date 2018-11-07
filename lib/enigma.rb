@@ -15,6 +15,7 @@ class Enigma
   end
 
   def encrypt(message, key = helper.random_key, date = helper.today(Date.today))
+    date, key = key, helper.random_key if key.length == 6
     keys_array = shift.final_shift(key, date)
     {:encryption => translate.do_rotations(message, keys_array),
     :key => key,
