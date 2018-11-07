@@ -7,7 +7,6 @@ class Shift
   end
 
   def the_offsets(date)
-    date = date.strftime('%d%m%y')
     offsets = (date.to_i ** 2).to_s[-4..-1].chars
     offsets.map {|offset| offset.to_i}
   end

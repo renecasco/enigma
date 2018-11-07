@@ -1,30 +1,31 @@
 {
   "Unit Tests": {
     "coverage": {
-      "/Users/renecasco/turing/1module/projects/enigma/lib/shift.rb": [
+      "/Users/renecasco/turing/1module/projects/enigma/lib/translate.rb": [
         1,
         null,
         1,
+        1,
         null,
-        10,
-        2,
+        1,
+        3,
         null,
         null,
         1,
-        2,
-        2,
-        10,
         null,
+        12,
+        11,
+        11,
+        11,
         null,
         1,
+        null,
         1,
-        1,
-        5,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1541548350
+    "timestamp": 1541558788
   }
 }

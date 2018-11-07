@@ -20,14 +20,14 @@ class ShiftTest < Minitest::Test
 
   def test_it_returns_offsets_in_array
     shift = Shift.new
-    actual = shift.the_offsets(Date.parse("2018-11-04"))
+    actual = shift.the_offsets("041118")
     expected = [9, 9, 2, 4]
     assert_equal expected, actual
   end
 
   def test_final_shift_returns_sum_of_keys_and_offsets
     shift = Shift.new
-    actual = shift.final_shift("12345", Date.parse("2018-11-04"))
+    actual = shift.final_shift("12345", "041118")
     expected = [21, 32, 36, 49]
     assert_equal expected, actual
   end
