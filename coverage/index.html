@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-11-06T16:26:44-07:00">2018-11-06T16:26:44-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-11-06T16:52:30-07:00">2018-11-06T16:52:30-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.73
+         3.1
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>3</b> files in total.
-    <b>39</b> relevant lines. 
-    <span class="green"><b>39</b> lines covered</span> and
+    <b>1</b> files in total.
+    <b>12</b> relevant lines. 
+    <span class="green"><b>12</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -51,33 +51,13 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#393905bf9b71d81d25abc1ed2e6ce33a10cbda79" class="src_link" title="lib/enigma.rb">lib/enigma.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>32</td>
-        <td>15</td>
-        <td>15</td>
-        <td>0</td>
-        <td>2.3</td>
-      </tr>
-      
-      <tr>
         <td class="strong"><a href="#70a2af82f4f677bc747dc9d83f3b44640d46f209" class="src_link" title="lib/shift.rb">lib/shift.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>21</td>
         <td>12</td>
         <td>12</td>
         <td>0</td>
-        <td>3.7</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#6c2aabc4324c005b3a81ff01a91d1a7466e26296" class="src_link" title="lib/translate.rb">lib/translate.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>22</td>
-        <td>12</td>
-        <td>12</td>
-        <td>0</td>
-        <td>8.8</td>
+        <td>3.1</td>
       </tr>
       
     </tbody>
@@ -95,217 +75,6 @@
       </div>
     
       <div class="source_files">
-      
-        <div class="source_table" id="393905bf9b71d81d25abc1ed2e6ce33a10cbda79">
-  <div class="header">
-    <h3>lib/enigma.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>15</b> relevant lines. 
-      <span class="green"><b>15</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
-    <ol>
-      
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
-          
-          <code class="ruby">require &#39;./lib/translate&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="2">
-          <span class="hits">1</span>
-          
-          <code class="ruby">require &#39;./lib/shift&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="3">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
-          
-          <code class="ruby">class Enigma</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  attr_reader :translate,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="6">
-          
-          
-          <code class="ruby">              :shift</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="7">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def initialize</code>
-        </li>
-      
-        <li class="covered" data-hits="6" data-linenumber="9">
-          <span class="hits">6</span>
-          
-          <code class="ruby">    @translate = Translate.new</code>
-        </li>
-      
-        <li class="covered" data-hits="6" data-linenumber="10">
-          <span class="hits">6</span>
-          
-          <code class="ruby">    @shift = Shift.new</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="11">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="12">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def random_key</code>
-        </li>
-      
-        <li class="covered" data-hits="6" data-linenumber="14">
-          <span class="hits">6</span>
-          
-          <code class="ruby">    Array.new(5){|index|rand(0..9)}.join</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="16">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def encrypt(message, key = random_key, date = Date.today)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    keys_array = @shift.final_shift(key, date)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="19">
-          
-          
-          <code class="ruby">    {:encryption =&gt; translate.do_rotations(message, keys_array),</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="20">
-          
-          
-          <code class="ruby">    :key =&gt; key,</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="21">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    :date =&gt; date.strftime(&#39;%d%m%y&#39;)}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="22">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="23">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="24">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def decrypt(message, key, date = Date.today)</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="25">
-          <span class="hits">5</span>
-          
-          <code class="ruby">    keys_array = @shift.final_shift(key, date).map {|key|-key}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
-          <code class="ruby">    {:decryption =&gt; translate.do_rotations(message, keys_array),</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="27">
-          
-          
-          <code class="ruby">    :key =&gt; key,</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="28">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    :date =&gt; date.strftime(&#39;%d%m%y&#39;)}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="29">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="30">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="31">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="32">
-          
-          
-          <code class="ruby">end</code>
-        </li>
-      
-    </ol>
-  </pre>
-</div>
-
       
         <div class="source_table" id="70a2af82f4f677bc747dc9d83f3b44640d46f209">
   <div class="header">
@@ -411,20 +180,20 @@
           <code class="ruby">  def final_shift(number, date)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="16">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
           
           <code class="ruby">    keys = the_keys(number)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="17">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
           
           <code class="ruby">    offsets = the_offsets(date)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="18">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="5" data-linenumber="18">
+          <span class="hits">5</span>
           
           <code class="ruby">    keys.zip(offsets).map {|numbers| numbers.sum}</code>
         </li>
@@ -442,157 +211,6 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
-          
-          
-          <code class="ruby">end</code>
-        </li>
-      
-    </ol>
-  </pre>
-</div>
-
-      
-        <div class="source_table" id="6c2aabc4324c005b3a81ff01a91d1a7466e26296">
-  <div class="header">
-    <h3>lib/translate.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>12</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
-    <ol>
-      
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
-          
-          <code class="ruby">require &#39;pry&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="2">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
-          
-          <code class="ruby">class Translate</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  attr_reader :character_set</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="5">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def initialize</code>
-        </li>
-      
-        <li class="covered" data-hits="6" data-linenumber="7">
-          <span class="hits">6</span>
-          
-          <code class="ruby">    @character_set = (&quot;a&quot;..&quot;z&quot;).to_a &lt;&lt; &quot; &quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="8">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="10">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def do_rotations(message, keys)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="11">
-          
-          
-          <code class="ruby">    message.downcase.chars.map.with_index do |char, index|</code>
-        </li>
-      
-        <li class="covered" data-hits="24" data-linenumber="12">
-          <span class="hits">24</span>
-          
-          <code class="ruby">      if @character_set.include?(char)</code>
-        </li>
-      
-        <li class="covered" data-hits="22" data-linenumber="13">
-          <span class="hits">22</span>
-          
-          <code class="ruby">        rotated_character_set = @character_set.rotate(keys[index % 4])</code>
-        </li>
-      
-        <li class="covered" data-hits="22" data-linenumber="14">
-          <span class="hits">22</span>
-          
-          <code class="ruby">        char_index = @character_set.find_index(char)</code>
-        </li>
-      
-        <li class="covered" data-hits="22" data-linenumber="15">
-          <span class="hits">22</span>
-          
-          <code class="ruby">        rotated_character_set[char_index]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="16">
-          
-          
-          <code class="ruby">      else</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="17">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        char</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="18">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="19">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    end.join</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="20">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="21">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">end</code>
